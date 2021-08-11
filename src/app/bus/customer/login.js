@@ -4,13 +4,13 @@ import React from 'react';
 import { useCustomerAuth } from './hooks/useCustomerAuth';
 
 export const Login = () => {
-  const { handleChange, logIn, authorizedCustomer } = useCustomerAuth();
+  const { handleChange, logIn } = useCustomerAuth();
 
-  const authorizedCustomerJSX = authorizedCustomer && (
-    <>
-      <p>Authorized Customer: { authorizedCustomer.customer.name }</p>
-    </>
-  );
+  // const authorizedCustomerJSX = authorizedCustomer && (
+  //   <>
+  //     <p>Authorized Customer: { authorizedCustomer.customer.name }</p>
+  //   </>
+  // );
 
   return (
     <>
@@ -18,7 +18,7 @@ export const Login = () => {
       <input type="text" placeholder="username" name="username" onChange={handleChange} />
       <input type="password" placeholder="password" name="password" onChange={handleChange} />
       <button type="submit" onClick={logIn}>Login</button>
-      {authorizedCustomerJSX}
+      {/* {authorizedCustomerJSX} */}
     </>
   )
 };
