@@ -1,10 +1,10 @@
 import React from 'react';
 // import { List } from './list'
 
-import { useCustomer } from './hooks/useCustomer'
+import { useCustomerCreator } from './hooks/useCustomer'
 
 export const Customer = () => {
-  const { handleChange, save, createdAccount } = useCustomer();
+  const { handleChange, save, createdAccount } = useCustomerCreator();
 
   const customerJSX = createdAccount && (
     <p>
