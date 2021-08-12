@@ -48,7 +48,7 @@ const wrappedHttpLink = authLink.concat(httpLink);
 // Функция выбирает либо http либо ws
 const link = split(
   ({ query }) => {
-    // нужно понять, каккого рода операцию хотим выполнить (по типу запроса)
+    // нужно понять, какого рода операцию хотим выполнить (по типу запроса)
     const definition = getMainDefinition(query);
     return (
       // тип операции доступен

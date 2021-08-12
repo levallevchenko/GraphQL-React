@@ -8,6 +8,7 @@ import React from 'react';
 // import { Profile } from './profile';
 import { CheckinPet } from './checkinPet';
 import { CheckoutPet } from './checkoutPet';
+import { PetReturned } from './petReterned';
 
 
 
@@ -21,6 +22,7 @@ export const Pet = () => {
       <SpecialList /> */}
       <CheckinPet />
       <CheckoutPet />
+      <PetReturned />
     </>
   )
 };
