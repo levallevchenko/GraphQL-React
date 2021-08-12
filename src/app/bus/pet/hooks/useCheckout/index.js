@@ -4,19 +4,19 @@ import { useMutation } from '@apollo/react-hooks';
 import { loader } from 'graphql.macro';
 
 // Mutations
-const mutationCheckIn = loader('./gql/mutationCheckIn.graphql');
+const mutationCheckOut = loader('./gql/mutationCheckout.graphql');
 
-export const useCheckin = () => {
-  const [_checkIn, { data, errors }] = useMutation(mutationCheckIn);
+export const useCheckOut = () => {
+  const [_checkOut, { data, errors }] = useMutation(mutationCheckOut);
   const [error, setError] = useState(false);
 
-  const checkIn = (id) => {
+  const checkOut = (id) => {
     if (error) {
       setError(false);
     }
     (async () => {
       try {
-        await _checkIn({
+        await _checkOut({
           variables: {
             id
           }
@@ -27,10 +27,10 @@ export const useCheckin = () => {
     })()
   };
 
-  const pet = data && data.checkIn.pet;
+  const pet = data && data.checkOut.pet;
 
   return {
-    checkIn,
+    checkOut,
     pet,
     errors,
     error

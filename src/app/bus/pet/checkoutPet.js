@@ -2,14 +2,14 @@
 import React from 'react';
 
 // Hooks
-import { useCheckin } from './hooks/useCheckin';
+import { useCheckOut } from './hooks/useCheckout';
 
-export const CheckinPet = () => {
-  const { checkIn, pet, errors, error } = useCheckin();
+export const CheckoutPet = () => {
+  const { checkOut, pet, errors, error } = useCheckOut();
 
   const petJSX = pet && (
     <>
-      <p>Your pet is checkin:</p>
+    <p>Your pet is checkout:</p>
       <p>Id: { pet.id }</p>
       <p>Name: { pet.name }</p>
     </>
@@ -29,8 +29,8 @@ export const CheckinPet = () => {
 
   return (
     <>
-      <h2>Checkin</h2>
-      <button onClick={() => checkIn('C-1')}>CheckIn</button>
+      <h2>Checkout</h2>
+      <button onClick={() => checkOut('C-1')}>CheckOut</button>
       {petJSX}
       {errorsJSX}
       {errorJSX}
