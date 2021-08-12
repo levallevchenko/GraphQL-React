@@ -9,6 +9,7 @@ export const CheckinPet = () => {
 
   const petJSX = pet && (
     <>
+      <p>Your pet is checkin:</p>
       <p>Id: { pet.id }</p>
       <p>Name: { pet.name }</p>
     </>
@@ -28,7 +29,7 @@ export const CheckinPet = () => {
 
   return (
     <>
-      <h1>Checkin</h1>
+      <h2>Checkin</h2>
       <button onClick={() => checkIn('C-1')}>CheckIn</button>
       {petJSX}
       {errorsJSX}

@@ -14,7 +14,7 @@ import { CheckoutPet } from './checkoutPet';
 export const Pet = () => {
   return (
     <>
-      <h1>Pet</h1>
+      <h1>Your Pet</h1>
       {/* <Profile />
       <Counter />
       <List />
