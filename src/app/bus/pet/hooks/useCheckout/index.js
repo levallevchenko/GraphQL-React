@@ -10,9 +10,10 @@ export const useCheckOut = () => {
   const [_checkOut, { data, errors }] = useMutation(mutationCheckOut);
   const [error, setError] = useState(false);
 
-  console.log(error)
-
   const checkOut = (id) => {
+    if (error) {
+      setError(false);
+    }
     (async () => {
       try {
         await _checkOut({

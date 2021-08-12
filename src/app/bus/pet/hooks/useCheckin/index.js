@@ -11,6 +11,9 @@ export const useCheckin = () => {
   const [error, setError] = useState(false);
 
   const checkIn = (id) => {
+    if (error) {
+      setError(false);
+    }
     (async () => {
       try {
         await _checkIn({
