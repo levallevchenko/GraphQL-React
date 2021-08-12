@@ -2,11 +2,12 @@ import React from 'react';
 
 // Components
 
-import { Counter } from './counter';
-import { List } from './list';
-import { SpecialList } from './specialList';
-import { Profile } from './profile';
+// import { Counter } from './counter';
+// import { List } from './list';
+// import { SpecialList } from './specialList';
+// import { Profile } from './profile';
 import { CheckinPet } from './checkinPet';
+import { CheckoutPet } from './checkoutPet';
 
 
 
@@ -19,6 +20,7 @@ export const Pet = () => {
       <List />
       <SpecialList /> */}
       <CheckinPet />
+      <CheckoutPet />
     </>
   )
 };
