@@ -5,13 +5,10 @@ import React from 'react';
 import { usePetReturned } from './hooks/usePetReturned';
 
 export const PetReturned = () => {
-  const { pet, errors } = usePetReturned();
+  const { loading, errors, pet } = usePetReturned();
 
-  const petJSX = pet && (
-    <>
-      <p>Id: { pet.id }</p>
-      <p>Name: { pet.name }</p>
-    </>
+  const loaderJSX = loading && (
+    <p>User check in progress...</p>
   );
 
   const errorsJSX = errors && (
@@ -20,11 +17,19 @@ export const PetReturned = () => {
     </p>
   );
 
+  const petJSX = pet && (
+    <>
+      <p>Id: { pet.id }</p>
+      <p>Name: { pet.name }</p>
+    </>
+  );
+
   return (
     <>
       <h2>Pet Returned</h2>
-      {petJSX}
+      {loaderJSX}
       {errorsJSX}
+      {petJSX}
     </>
   )
 };
